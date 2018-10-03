@@ -13,7 +13,7 @@ int main (void)
   printf("Saisir b pour ajouter");
   scanf("%c", &choix);
   getchar();
-  
+  /*test*/
   
   if (choix == 'a')
   {
