@@ -1,0 +1,136 @@
+Déclaration des variables de type caractère choix et c;
+déclaration des variables de type entier i, x prends 0, z, j, k;
+déclaration des variables de type (chaine de) caractère name, lname et adr;
+
+ouverture du document "ID.txt" avec le pointeur fp en mode lecture (r);
+ouverture du document "base-tmp.txt" avec le pointeur fptmp en mode écriture/lecture (w+);
+lecture du document pointé par fp pour affecter à 'z' la valeur contenue dans le fichier;
+fermeture du document pointé par fp;
+afficher "(a) Ajouter une personne dans le repertoire"
+afficher "(b) Afficher le répertoire"
+afficher "(c) Recherche d'une personne (id)"
+afficher "(d) Supprimer personne du repertoire"
+afficher "(e) Supprimer le repertoire entier"
+afficher "(x) ne rien faire"
+recuperation du choix utilisateur
+
+Si 'a' est choisi, on fait:
+ ouverture du document "base.txt" en mode pointé fp
+ ouverture du document "base-save.txt" en mode pointé fpo
+ ajout de 1 à z
+ ecriture sur fichier fp et fpo de z
+ afficher "nom : "
+ prise donnée utilisateur
+ ecriture sur fichier fp et fpo de donnée utilisateur
+ afficher "prénom : "
+ prise donnée utilisateur
+ ecriture sur fichier fp et fpo de donnée utilisateur
+ afficher "téléphone : "
+ prise donnée utilisateur
+ ecriture sur fichier fp et fpo de donnée utilisateur
+ afficher "Addresse mail : "
+ prise donnée utilisateur
+ ecriture sur fichier fp et fpo de donnée utilisateur
+ fermeture de fp et fpo
+ ouverture du document "ID.txt" en mode pointé fp
+ z=z+1
+ ecriture sur fichier fp de z
+ fermeture de fp
+ interruption du programme;
+
+Si 'b' est choisi, on fait:
+ ouverture du document "base.txt" en mode lecture pointé fp
+ i=0
+ affichage de " id  | nom | prénom  | numero  | mail  "
+ affichage de "-----------------------------------------------------------------------------------------------------------"
+ commencer boucle à 0 incrémenter de 1 tant que i est inferieur à z
+  prendre les valeur j name lname k adr
+  affichage de " j  | name | lname  | k  | adr  "
+  affichage  de "-----------------------------------------------------------------------------------------------------------"
+  fin tant que
+ fermeture de fp
+ interruption du programme;
+
+Si 'c' est choisi, on fait:
+  utilisation commandes systemes suivante: cls, color a, title Recherche personne (id);
+  ouverture du document "base.txt" avec le pointeur fp en mode lecture (r);
+  i prend la valeur 0;
+  afficher "Donnez une entrée:"
+  l'utilisateur affecte une valeur à la variable x
+  Si x est supérieur à z ou x inférieur à 0, alors:
+    afficher "Contact introuvable";
+    interruption du programme;
+    fin si
+  afficher "	id	|	Nom	| prenom	| numero		| mail	"
+  afficher "-----------------------------------------------------------------------------------------------------------"
+  Pour i égal à 0 à x (avec un pas de 1), on fait:
+    j prend la valeur de type entier lue dans le fichier pointé par fp;
+    name prend la valeur de type (chaine de) caractère lue dans le fichier pointé par fp;
+    lname prend la valeur de type (chaine de) caractère lue dans le fichier pointé par fp;
+    k prend la valeur de type entier lue dans le fichier pointé par fp;
+    adr prend la valeur de type (chaine de) caractère lue dans le fichier pointé par fp;
+    fin Pour
+  afficher " "
+  afficher j
+  afficher " | "
+  afficher name
+  afficher " | "
+  afficher lname
+  afficher " | "
+  afficher k
+  afficher " | "
+  afficher adr
+  fermeture du document pointé par fp;
+  interruption du programme;
+
+Si 'd' est choisi, on fait:
+ ouverture du document "base.txt" en mode lecture pointé par fp
+ affichage de "donnez un entrée"
+ prise donnée utilisateur
+ commencer boucle à 0 incrémenter de 1 tant que i est inferieur à z
+  prendre les valeur j name lname k adr sur fichier fp
+  si i>x-1 et que i<z
+   ecriture sur fichier fptmp de j name lname k adr
+   fin de si
+  si i>x-1 et que i>=0
+   ecriture sur fichier fptmp de j name lname k adr
+   fin de si
+  fin tant que
+  fermerture du fichier fp et fptmp
+  ouverture du document "base.txt" en mode ecriture pointé par fp
+  ouverture du document "base-tmp.txt" en mode lecture pointé par fptmp
+  commencer boucle à 0 incrémenter de 1 tant que i est inferieur à z
+   prendre les valeur j name lname k adr sur fichier fptmp
+   ecriture sur fichier fp de j name lname k adr
+  fin tant que
+  fermeture de fp
+  fermeture de fptmp
+  ouverture du document "base.txt" en mode lecture pointé fp
+  i=0
+  affichage de " id  | nom | prénom  | numero  | mail  "
+  affichage de "-----------------------------------------------------------------------------------------------------------"
+  commencer boucle à 0 incrémenter de 1 tant que i est inferieur à z
+   prendre les valeur j name lname k adr
+   affichage de " j  | name | lname  | k  | adr  "
+   affichage  de "-----------------------------------------------------------------------------------------------------------"
+   fin tant que
+  fermeture de fp
+
+Si 'e' est choisi, on fait:
+  utilisation commandes systemes suivante: cls, color c, title Supression du repertoire ENTIER, echo SI c'est une erreur fermez cette fenetre, sinon appuyer sur entree et pause;
+  ouverture du fichier "base.txt" avec le pointeur fp en mode écriture (w);
+  écriture de "" dans le fichier pointé par fp;
+  afficher "répertoire supprimé !"
+  fermeture du document pointé par fp;
+  ouverture du document "ID.txt" avec le pointeur fp en mode écriture (w);
+  écriture de "0" dans le fichier pointé par fp;
+  fermeture du document pointé par fp;
+  interruption du programme;
+
+Si 'x' est choisi, on fait:
+  interruption du programme;
+
+Si rien est choisi, on fait:
+  interruption du programme;
+
+fin du programme
