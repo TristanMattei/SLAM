@@ -36,7 +36,7 @@ void Supprime()
 	puts("Erreur de lecture fichier\n"); 
   }
 	
-		printf("Saisir l'identifiant du contact à supprimer");
+		printf("Saisir l'identifiant du contact Ã  supprimer");
 		scanf("%d",&ide);
 	 
 	  	for (id=1;id<nLigne+1;id=id+1)
@@ -88,7 +88,6 @@ FILE *fp;
 	
 	  	for (id=0;id<=nLigne;id=id+1)
   	{
-		fscanf(fp, "%d", &id);
 		fscanf(fp, "%s", &nom);
 		fscanf(fp, "%s", &prenom);
 		fscanf(fp, "%s", &number);
@@ -184,11 +183,11 @@ int main(void)
 	Menu: 
 	
 	printf("\nMenu: faites un choix: \n");
-	printf("1.Afficher le contenu du répertoire \n");
-	printf("2.Ajouter une personne dans le répertoire' \n");
-	printf("3.Rechercher une personne dans le répertoire \n");
-	printf("4.Supprimer le contenu du répertoire\n");
-	printf("5.Supprimer une personne du répertoire\n");
+	printf("1.Afficher le contenu du rÃ©pertoire \n");
+	printf("2.Ajouter une personne dans le rÃ©pertoire' \n");
+	printf("3.Rechercher une personne dans le rÃ©pertoire \n");
+	printf("4.Supprimer le contenu du rÃ©pertoire\n");
+	printf("5.Supprimer une personne du rÃ©pertoire\n");
 	printf("6.Quitter\n");
 	
 	scanf("%d",&choix);
