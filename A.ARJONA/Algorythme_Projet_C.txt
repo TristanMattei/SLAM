@@ -1,0 +1,107 @@
+Déclaration des variables de type entier choix, id, exit, count, i, codeId
+Déclaration des variables de type caractère c, prenom, nom, email, tel
+
+Tant que exit est différent de 1 alors
+	On affecte à fp = fopen("repertoire.txt", "a+")
+	Si fp est nul alors
+		Création du fichier "répertoire.txt"
+	Fin si
+	Afficher "MENU"
+	L'utilisateur affecte une valeur à la variable "choix"
+
+	Si choix = 1 alors
+		afficher "REPERTOIRE"
+		Pour i allant de 0 à count alors
+			Affecter la valeur du fichier à id 
+			Affecter la valeur du fichier nom
+			Affecter la valeur du fichier prenom
+			Affcter la valeur du fichier tel
+			Affecter la valeur du fichier email
+
+			Afficher id, nom, prenom, tel, email
+		Fin pour
+	Fin si
+
+	Si choix = 2 alors
+		Afficher AJOUT D'UN UTILISATEUR  IDENTIFIANT:
+		Affecter la valeur du fichier à id
+
+		Afficher Nom:
+		Affecter la valeur du fichier à nom
+
+   		Afficher Prenom:
+		Affecter la valeur du fichier à prenom
+
+		Afficher Telephone:
+		Affecter la valeur du fichier à tel
+
+		Afficher Email:
+		Affecter la valeur du fichier à email
+		
+		Afficher id, nom, prenom, tel, email
+	Fin si
+
+	Si choix = 3 alors
+		
+		Afficher RECHERCHER UN UTILISATEUR
+
+		Afficher Saisir identifiant de la personne:
+		Afecter la valeur du fichier à codeId
+
+			Pour i allant de 0 à count
+				Affecter la valeur du fichier à id 
+				Affecter la valeur du fichier nom
+				Affecter la valeur du fichier prenom
+				Affcter la valeur du fichier tel
+				Affecter la valeur du fichier email
+				
+				Si codeId = id alors
+					Afficher Identifiant ->  Nom ->  Prenom ->  Telephone ->  Email ->  , id, nom, prenom, tel, email
+				Fin si
+			Fin pour
+	Fin si
+
+	Si choix = 4 alors
+		Afficher SUPPRIMER UN UTILISATEUR
+		Afficher Saisir identifiant de la personne :
+		Affecter la valeur du fichier à codeId
+		Ouverture du fichier temporaire "repertoire_tmp.txt en mode de lecture a+
+
+		Si fptmp = NULL alors
+			Création du fichier temporaire "repertoire_tmp.txt"
+		Fin si
+		
+		Pour i allant de 0 à count alors
+			Affecter la valeur du fichier à id 
+			Affecter la valeur du fichier nom
+			Affecter la valeur du fichier prenom
+			Affcter la valeur du fichier tel
+			Affecter la valeur du fichier email
+
+			Si code est différent de id alors
+				Ecrire dans le fichier temporaire id, nom, prenom, tel, email
+			Fin si
+		Fin pour
+		
+		Fermer le fichier "repertoire.txt"
+		Fermer le fichier temporaire "repertoire_tmp.txt"
+
+		Supprimer le fichier "repertoire.txt"
+		Renommer "repertoire_tmp.txt" en "repertoire.txt"
+
+	Fin si
+
+	Si choix = 5 alors
+		Déclaration de la variable c
+		Afficher "[!] Etes_vous sur de vouloir vider le repertoire ?"
+		Affecter la valeur du fichier à la variable c
+		Si c=1 alors 
+			
+
+	Si choix = 6 alors
+		Affecter la valeur 1 a la variable exit
+	Fin si
+	
+	Fermer le fichier "repertoire.txt"
+
+Fin tant que	
