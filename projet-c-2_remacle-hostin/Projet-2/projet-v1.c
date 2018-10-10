@@ -5,7 +5,7 @@ int main(void)
 {
 	system("title Gestion de repertoire");
 	FILE *fp, *fptmp, *fpo;
-	char choix, nom[50], prenom[50], am[50], c, name[50], lname[50], adr[50];
+	char choix, c, name[50], lname[50], adr[50];
 	int id[10], tel[10], i, x=0, z, j, k;
 
 	fp = fopen("ID.txt", "r");
@@ -135,7 +135,7 @@ int main(void)
 				fscanf(fpo, "%d", &z);
 				fclose(fpo);
 				i=0;
-				puts("donnez un entrée");
+				puts("donnez un entrÃ©e");
 				scanf("%d", &x);
 				for (i=0; i<z; i++)
 				{
@@ -242,7 +242,7 @@ int main(void)
 				system("cls");
 				system("color c");
 				system("title WTF");
-				system("echo wooops vous vous etes trompé de bouton");
+				system("echo wooops vous vous etes trompÃ© de bouton");
 				system("pause");
 				break;
 	}
