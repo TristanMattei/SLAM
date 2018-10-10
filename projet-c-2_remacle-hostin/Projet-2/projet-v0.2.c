@@ -5,7 +5,7 @@ int main(void)
 {
 	system("title Gestion de repertoire");
 	FILE *fp, *fptmp, *fpo;
-	char choix, nom[50], prenom[50], am[50], c, name[50], lname[50], adr[50];
+	char choix, c, name[50], lname[50], adr[50];
 	int i, x=0, z, j, k;
 
 	fp = fopen("ID.txt", "r");
