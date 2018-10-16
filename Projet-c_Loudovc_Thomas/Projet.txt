@@ -1,5 +1,0 @@
-1      Blanc      Valentin      0614786553      valentinblanc@gmail.com
-2      Dubois      Léa      0616187532      leadubois@gmail.com
-3      Durand      Emma      0751489563      emmadurand@hotmail.fr
-4      Louis      Matthieu      0788546031      matthieulouis@gmail.com
-5      Nahi      Karim      0784562131      karimnahi@gmail.com
