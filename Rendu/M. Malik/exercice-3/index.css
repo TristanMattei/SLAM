@@ -1,0 +1,26 @@
+body{
+	background-color: #336699;
+	align-self: center;
+	position: relative;
+	border-spacing: 5px;
+}
+
+.page{
+	width: 780px;
+	margin: auto;
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+	position:relative;
+	background-color: rgb(200,200,255);
+	border: 25px;
+	padding: 25px;
+	align-self: center;
+}
+
+img{
+	border-radius: 100%;
+}
+
+div{
+	border: 1px solid red;
+}
