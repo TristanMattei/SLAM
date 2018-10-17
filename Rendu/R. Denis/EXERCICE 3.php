@@ -28,9 +28,7 @@
       else
     {
       // L'identification a réussi
-      $message = 'Bienvenue '. LOGIN .' !';
-      header('Location: /bonjour.php');
-      exit();
+      $message = 'Bienvenue '. LOGIN .' !';      
     }
   }
 ?>
@@ -45,7 +43,7 @@
       <p><?php echo $message; ?></p>
     <?php endif; ?>
       <fieldset>
-        <form>
+        <form action="./bonjour.php" method="post">
         <legend>Identifiant</legend>
           <p>
              <label for="login">Login :</label>
