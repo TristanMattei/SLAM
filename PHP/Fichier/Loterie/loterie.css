@@ -1,0 +1,39 @@
+h1{
+  color: #24445C;
+  text-align: center;
+}
+body{
+  background-image: url("fond.jpg");
+  color: #24445C;
+  font-size: 30px;
+  background-position: center;
+}
+fieldset{
+  opacity: 100%;
+  border-radius: 12px;
+  border-color: #24445C;
+  border-width: 10px;
+  border-style: solid;
+  background-color: white;
+}
+
+.titre{
+  display: block;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 900px;
+  text-align: center;
+  height: auto;
+
+}
+
+h4{
+  color: #24445C;
+  text-align: center;
+
+}
+button{
+  margin-right: auto;
+  margin-left: auto;
+}
