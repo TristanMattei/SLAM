@@ -1,2 +1,3 @@
-- Créer un dossier avec tous les noms de votre groupe
-- Mettre tous les fichiers PHP ainsi que la base de donnée SQL
+- CrÃ©er un dossier avec tous les noms de votre groupe
+- Mettre tous les fichiers PHP ainsi que la base de donnÃ©e SQL
+- Mettre sa documentation
