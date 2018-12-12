@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+<body>
+<?php if(!empty($message)) : ?>
+<p><?php echo $message; ?></p>
+<?php endif; ?>
+<form action="Ajout.php" method="get">
+<fieldset>
+<legend>CONNEXION</legend>
+  <p>
+    <table>
+      <tr><td><label for="Adresse_mail">Adresse e-mail</label></td>
+      <td><input type="text" name="Adresse_mail" id="Adresse_mail" value="" /></tr></td>
+      <tr><td><label for="MDP">Mot de passe</label></td>
+      <td><input type="text" name="MDP" id="MDP" value="" /></tr></td>
+</form></tr></td>
+      <tr><td><br><br><input type="submit" name="Connexion" value="Connexion" /></tr></td>
+    </table>
+  </p>
+</fieldset>
+</form>
+</body>
+</html>
+
+<?php
+
+try
+{
+  $bdd = new PDO('mysql:host=localhost;dbname=inscription;charset=utf8','root','');
+}
+catch (Exception $e)
+{
+  die ('Erreur : '.$e ->getMessage());
+}
+
+$login= $_GET['login'];
+$mdp= $_GET['MDP'];
+$nom= $_GET['nom'];
+$prenom= $_GET['prenom'];
+$age= $_GET['Age'];
+$metier= $_GET['metier'];
+$pays= $_GET['pays'];
+
+$req = $bdd ->prepare ('INSERT INTO utilisateurs (Login,MDP,Nom,Prenom,Age,Metier,Pays) VALUES(:Login,:MDP,:Nom,:Prenom,:Age,:Metier,:Pays)');
+$req->execute (array(
+      'Login'=>$login,
+      'MDP'=>$mdp,
+      'Nom'=>$nom,
+      'Prenom'=>$prenom,
+      'Age'=>$age,
+      'Metier'=>$metier,
+      'Pays'=>$pays
+    ));
+
+ ?>
