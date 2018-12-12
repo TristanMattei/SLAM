@@ -1,0 +1,61 @@
+<?php
+// Include de la connexion a la base de donnée
+    require '../Ressources/database.php';
+
+// Check de l'id de la commande cliquer au préalable dans la liste
+    if(!empty($_GET['id']))
+    {
+        $id = checkInput($_GET['id']);
+    }
+
+// Vérification si l'user a mis "oui" a la suppression --> Formulaire en dessous de la page
+    if(!empty($_POST))
+    {
+        $id = checkInput($_POST['id']);
+        $db = Database::connect();
+        $statement = $db->prepare("DELETE FROM informations WHERE id = ?");
+        $statement->execute(array($id));
+        Database::disconnect();
+        header("Location: gestion_user.php");
+    }
+
+    function checkInput($data)
+    {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+?>
+
+<!-- Debut du HTML -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+<!-- Corp avec le formulaire -->
+    <body>
+         <div class="container admin">
+            <div class="row">
+                <h1><strong>Supprimer un item</strong></h1>
+                <br>
+                <form class="form" action="delete.php" role="form" method="post">
+                    <input type="hidden" name="id" value="<?php echo $id;?>"/>
+                    <p class="alert alert-warning">Etes vous sur de vouloir supprimer ?</p>
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-warning">Oui</button>
+                      <a class="btn btn-default" href="gestion_menu.php">Non</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
