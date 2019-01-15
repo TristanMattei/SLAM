@@ -1,3 +1,3 @@
 # SLAM
 
-![Test Image 1](image.png)
+![Test Image 1](https://github.com/TristanMattei/SLAM/image.png)
