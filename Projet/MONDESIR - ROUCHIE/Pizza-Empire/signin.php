@@ -1,4 +1,4 @@
-<?php 
+<?php
 $_SESSION['message']='';
 include_once('app/app.php');
 if(isset($_COOKIE['user'])) {
@@ -75,7 +75,7 @@ if(isset($_COOKIE['user'])) {
                         <h2><?php echo $_SESSION["message"]; ?><h2>
                 </div>
                 <form class="form-style-1 placeholder-1" method="post" action="process/login-process.php">
-      
+
        <div class="form-group">
         <label class="control-label col-sm-2" for="email">Email:</label>
         <div class="col-sm-10">
@@ -88,13 +88,13 @@ if(isset($_COOKIE['user'])) {
           <input type="password" class="form-control" id="psswd" placeholder="Pizza023" name="psswd" required="">
         </div>
       </div>
-      <div class="form-group">        
+      <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default" style="cursor: pointer; border: 1px dotted red">Valider</button>
         </div>
       </div>
     </form>
-               
+
         </div><!-- container -->
 </section>
 

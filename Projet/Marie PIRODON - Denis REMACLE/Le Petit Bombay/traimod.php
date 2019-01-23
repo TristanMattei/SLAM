@@ -4,7 +4,7 @@ $b=$_POST['pwd'];
 $c=$_POST['mail'];
 $d=$_POST['adresse'];
 $e=$_POST['tel'];
-$d=$_POST['amail']
+$d=$_POST['email'];
 if(empty($_POST))
 {
   $bdd = new PDO('mysql:host=localhost;dbname=restaurant;charset=utf8', 'root', '');
