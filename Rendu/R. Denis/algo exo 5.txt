@@ -1,0 +1,105 @@
+Exercice 5 partie 1
+déclaration de i = 0, partie, argent, un=0, x=0, resultat
+Récupération du nombre de parties a jouer en tant que partie (nombre entier)
+tant que i n'égale pas partie
+	Récupération de la quantitée d'argent en tant que argent
+	tant que x n'égale pas 6
+		Récupération de la valeur affichée sur le dé en tant que résultat
+		si resultat égale 1
+			un = un + 1
+		sinon
+			un = un
+	fin de tant que
+	si un est inférieur a 2
+		retirer 2 à argent
+	si un est supérieur a 4
+		ajouter 10 à argent
+	sinon
+		ajouter 5 à argent
+fin de tant que
+
+exercice 5 partie 2
+déclaration de i = 0, partie, argent, un=0, x=0, resultat, tab
+Récupération du nombre de parties a jouer en tant que partie (nombre entier)
+tant que i n'égale pas partie
+	Récupération de la quantitée d'argent en tant que argent
+	tant que x n'égale pas 6
+		Récupération de la valeur affichée sur le dé en tant que résultat
+		si resultat égale 1
+			un = un + 1
+		sinon
+			un = un
+		insertion de resultat dans tab
+	fin de tant que
+	si un est inférieur a 2
+		retirer 2 à argent
+	si un est supérieur a 4
+		ajouter 10 à argent
+	sinon
+		ajouter 5 à argent
+fin de tant que
+
+exercice 5 partie 3
+déclaration de i = 0, partie, argent, un=0, x=0, resultat, tab
+Récupération du nombre de parties a jouer en tant que partie (nombre entier)
+tant que i n'égale pas partie
+	Récupération de la quantitée d'argent en tant que argent
+	tant que x n'égale pas 6
+		Récupération de la valeur affichée sur le dé en tant que résultat
+		si resultat égale 1
+			un = un + 1
+			insertion de resultat dans tab
+		Ou si resultat est supérieur à 6
+			Afficher "entre 1 et 6"
+			x = x - 1
+		Ou si resultat est inférieur à 1
+			Afficher "entre 1 et 6"
+			x = x - 1
+		sinon
+			un = un
+			insertion de resultat dans tab
+	fin de tant que
+	si un est inférieur a 2
+		retirer 2 à argent
+	si un est supérieur a 4
+		ajouter 10 à argent
+	sinon
+		ajouter 5 à argent
+fin de tant que
+
+exercice 5 partie 3
+déclaration de i = 0, partie, argent, un=0, x=0, resultat, tab
+Récupération du nombre de parties a jouer en tant que partie (nombre entier)
+tant que i n'égale pas partie
+	Récupération de la quantitée d'argent en tant que argent
+	tant que x n'égale pas 6
+		Récupération de la valeur affichée sur le dé en tant que résultat
+		si resultat égale 1
+			un = un + 1
+			insertion de resultat dans tab
+		Ou si resultat est supérieur à 6
+			Afficher "entre 1 et 6"
+			x = x - 1
+		Ou si resultat est inférieur à 1
+			Afficher "entre 1 et 6"
+			x = x - 1
+		sinon
+			un = un
+			insertion de resultat dans tab
+	fin de tant que
+	si un est inférieur a 2
+		retirer 2 à argent
+		afficher "vous avez perdu 2 euros"
+		afficher "Vous possédez désormais" argent " euros"
+		afficher tab
+	si un est supérieur a 4
+		ajouter 10 à argent
+		afficher "vous avez gagné 10 euros"
+		afficher "Vous possédez désormais" argent " euros"
+		afficher tab
+	sinon
+		ajouter 5 à argent
+		afficher "vous avez gagné 5 euros"
+		afficher "Vous possédez désormais" argent " euros"
+		afficher tab
+fin de tant que
